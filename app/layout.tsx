@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Ating Tahanan Private House",
   description:
     "Enjoy a serene stay at our private house near stunning waterfalls and pristine beaches. Close to the market, we offer guided tours, delicious breakfast, lunch, and dinner, and convenient van services for a perfect getaway.",
+  icons: { icon: "/coconut-tree.svg" },
 };
 
 export default function RootLayout({
@@ -27,9 +28,10 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={inter.className}>
-          <Navbar />
-
-          {children}
+          <main className="flex flex-col min-h-screen bg-secondary">
+            <Navbar />
+            <section className="bg-red-400 flex-grow">{children}</section>
+          </main>
         </body>
       </html>
     </ClerkProvider>
