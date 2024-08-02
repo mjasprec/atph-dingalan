@@ -30,7 +30,7 @@ export default function RootLayout({
         <body className={inter.className}>
           <main className="flex flex-col min-h-screen bg-secondary">
             <Navbar />
-            <section className="bg-red-400 flex-grow">{children}</section>
+            <section className="flex-grow">{children}</section>
           </main>
         </body>
       </html>
