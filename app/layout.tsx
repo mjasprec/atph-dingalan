@@ -9,6 +9,7 @@ import {
 } from "@clerk/nextjs";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,10 +29,17 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={inter.className}>
-          <main className="flex flex-col min-h-screen bg-secondary">
-            <Navbar />
-            <section className="flex-grow">{children}</section>
-          </main>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <main className="flex flex-col min-h-screen bg-secondary">
+              <Navbar />
+              <section className="flex-grow">{children}</section>
+            </main>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

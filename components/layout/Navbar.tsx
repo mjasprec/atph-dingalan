@@ -4,6 +4,8 @@ import Container from "../Container";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
+import SearchInput from "../SearchInput/SearchInput";
+import { ModeToggle } from "../ModeToggle/ModeToggle";
 
 function Navbar() {
   const router = useRouter();
@@ -27,8 +29,10 @@ function Navbar() {
             <h2 className="text-xl">Ating Tahanan Private House</h2>
           </div>
 
+          <SearchInput />
+
           <div className="flex gap-3 items-center">
-            <div>theme</div>
+            <ModeToggle />
 
             <SignedOut>
               <SignInButton>
