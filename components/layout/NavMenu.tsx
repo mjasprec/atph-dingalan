@@ -18,14 +18,23 @@ const NavMenu = () => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => router.push("/accommodation/new")}>
-          <PlusIcon size={15} /> <span className="pl-2">Add Accommodation</span>
+        <DropdownMenuItem
+          className="cursor-pointer flex gap-2"
+          onClick={() => router.push("/accommodation/new")}
+        >
+          <PlusIcon size={15} /> <span>Add Accommodation</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => router.push("/my-accommodation")}>
-          <Hotel size={15} /> <span className="pl-2">My Accommodations</span>
+        <DropdownMenuItem
+          className="cursor-pointer flex gap-2"
+          onClick={() => router.push("/my-accommodation")}
+        >
+          <Hotel size={15} /> <span>My Accommodations</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => router.push("/accommodation/new")}>
-          <BookOpenCheck size={15} /> <span className="pl-2">My Bookings</span>
+        <DropdownMenuItem
+          className="cursor-pointer flex gap-2"
+          onClick={() => router.push("/accommodation/new")}
+        >
+          <BookOpenCheck size={15} /> <span>My Bookings</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
